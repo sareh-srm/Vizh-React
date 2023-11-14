@@ -7,6 +7,7 @@ export default {
       white: "#FFFFFF",
       black: "#000000",
       searchbar: "#F5F5F5",
+      nftName: "#f8f8f8"
     },
   },
   plugins: [],
