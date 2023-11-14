@@ -9,6 +9,7 @@ export default {
       searchbar: "#F5F5F5",
       nftName: "#f8f8f8"
     },
+    boxSizing: ['border-box'],
   },
   plugins: [],
 };
