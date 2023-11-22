@@ -6,7 +6,7 @@ export default {
     colors: {
       white: "#FFFFFF",
       black: "#000000",
-      searchbar: "#F5F5F5",
+      gray: "#F5F5F5",
       nftName: "#f8f8f8",
       footer: "#0E0E0E",
       submitButton: "#93D39B",
