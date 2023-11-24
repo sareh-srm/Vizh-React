@@ -11,7 +11,7 @@ const Header: React.FC = () => {
         <input
           type="text"
           placeholder="Search NFT, Artist, Exhibition"
-          className="search-bar bg-searchbar rounded-3xl py-2.5 px-7 m-10 w-96 h-10"
+          className="search-bar bg-gray rounded-3xl py-2.5 px-7 m-10 w-96 h-10"
         />
       </div>
 
