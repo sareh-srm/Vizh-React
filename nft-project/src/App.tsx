@@ -9,9 +9,9 @@ const App: React.FC = () => {
   return (
     <Router>
       <Header />
-      <NFTList />
       <Routes>
-        <Route path="/" element={<NFTDetails />} />
+        <Route path="/" element={<NFTList />} />
+        <Route path="/details" element={<NFTDetails />} />
       </Routes>
       <Footer />
     </Router>
