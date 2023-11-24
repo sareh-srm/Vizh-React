@@ -1,15 +1,20 @@
 import React from "react";
-import Header from "./components/Header.tsx";
-import NFTList from "./components/NFTList.tsx";
-import Footer from "./components/Footer.tsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import NFTList from "./components/NFTList";
+import Footer from "./components/Footer";
+import NFTDetails from "./components/NFTDetails";
 
 const App: React.FC = () => {
   return (
-    <div>
+    <Router>
       <Header />
       <NFTList />
+      <Routes>
+        <Route path="/" element={<NFTDetails />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 };
 
