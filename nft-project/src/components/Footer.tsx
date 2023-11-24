@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div>
-          <button className="bg-submitButton mt-5 w-44 h-14 rounded-full font-medium text-xl bg-submitButton">
+          <button className="bg-green mt-5 w-44 h-14 rounded-full font-medium text-xl bg-submitButton">
             Submit
           </button>
         </div>
