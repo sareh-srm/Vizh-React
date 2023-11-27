@@ -2,8 +2,8 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex justify-between items-baseline  flex-col lg:flex-row justify-between items-center px-4 py-2">
-      <div className="felx  items-center space-x-4 md:space-x-8 lg:space-x-12 mb-4 lg:mb-0">
+    <header className="flex justify-between items-baseline sm:flex">
+      <div className="felx">
         <img
           src="./src/assets/Logo.svg"
           className="inline-block m-4"
