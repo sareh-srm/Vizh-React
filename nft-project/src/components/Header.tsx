@@ -2,30 +2,31 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex justify-between items-baseline sm:flex">
-      <div className="felx">
+    <header className="flex justify-between w-full h-24 sm:h-28">
+      <div className="flex items-center gap-2 h-full pl-5 md:gap-10">
         <img
           src="./src/assets/Logo.svg"
-          className="inline-block m-4"
+          className="h-16 w-16"
           alt="Mintii-Logo"
         />
-        <div className="relative inline-block">
+        <div className="relative">
           <input
             type="text"
             placeholder="Search NFT, Artist, Exhibition"
-            className="bg-gray rounded-3xl py-3.5 px-12 m-10 w-96 h-10"
+            className="bg-gray rounded-3xl py-3.5 px-12 h-10 w-36 sm:w-72 lg:w-96"
           />
           <img
             src="./src/assets/search-icon.svg"
             alt="search icon"
-            className="absolute left-14 top-1/2 transform -translate-y-1/2"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2"
           />
         </div>
       </div>
-
-      <button className="flex justify-center items-center bg-black rounded-3xl text-white w-45 h-12 mr-12 p-4 align-middle">
-        Connect Wallet
-      </button>
+      <div className="flex items-center w-28 px-2 sm:w-40">
+        <button className="flex justify-center items-center bg-black text-white rounded-3xl w-full h-10 py-6">
+          Connect Wallet
+        </button>
+      </div>
     </header>
   );
 };
