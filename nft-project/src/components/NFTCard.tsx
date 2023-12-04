@@ -6,7 +6,7 @@ type CardProps = {
 
 const NFTCard: React.FC<CardProps> = (props) => {
   return (
-    <div className="w-64 h-96">
+    <div className="w-64 h-96 mb-4">
       <div className="rounded-t-xl bg-nftName h-1/7 p-4 shadow-md">
         NFT Name
       </div>
@@ -18,9 +18,17 @@ const NFTCard: React.FC<CardProps> = (props) => {
         />
       </div>
       <div className="rounded-b-xl bg-nftName p-4 shadow-md">
-        Artist Name
-        <br />
-        Current Bid 0.4 ETH
+        <div className="flex">
+          <img
+            src="./src/assets/profile-icon.svg"
+            alt="Artist profile"
+            className="pr-2"
+          />
+          <div>Artist Name</div>
+        </div>
+        <div>
+          Current Bid <span className="text-xl font-bold">0.4 ETH</span>
+        </div>
       </div>
     </div>
   );

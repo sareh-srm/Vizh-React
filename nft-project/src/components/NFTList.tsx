@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NFTList: React.FC = () => {
   return (
-    <main className="grid grid-cols-4 gap-8 p-4">
+    <main className="flex flex-wrap justify-start my-auto gap-10 px-4">
       <Link to="/details">
         <NFTCard imageUrl="./src/assets/nftPic1.svg" />
       </Link>
