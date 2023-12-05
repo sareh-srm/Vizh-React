@@ -27,30 +27,28 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-center pb-5">
+      <div className="flex flex-col justify-center gap-4 pb-20 md:flex-row">
         <div>
-          <ul>
-            <li className="font-normal text-3xl align-right">
-              <a href="" className="text-white pr-36">
-                Mintii Account
-              </a>
+          <ul className="">
+            <li className="font-normal text-3xl align-right text-white pr-36 pb-5">
+              Mintii Account
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Profile
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Setting
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Privact policy
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Terms and condition
               </a>
@@ -59,22 +57,20 @@ const Footer: React.FC = () => {
         </div>
         <div>
           <ul>
-            <li className="font-normal text-3xl align-right">
-              <a href="" className="text-collections pr-36">
-                Collections
-              </a>
+            <li className="font-normal text-3xl align-right text-collections pr-36 pb-5">
+              Collections
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Mint NFT
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Buy NFT
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Sell NFT
               </a>
@@ -83,17 +79,15 @@ const Footer: React.FC = () => {
         </div>
         <div>
           <ul>
-            <li className="font-normal text-3xl align-right">
-              <a href="" className="text-aboutUs pr-36">
-                About Us
-              </a>
+            <li className="font-normal text-3xl align-right text-aboutUs pr-36 pb-5">
+              About Us
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Mintii
               </a>
             </li>
-            <li className="text-tds font-normal text-3xl">
+            <li className="text-tds font-normal text-3xl pb-6">
               <a href="" className="py-2">
                 Artists
               </a>
