@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-footer mt-10">
+    <footer className="bg-footer mt-10 w-full h-2/6">
       <div className="flex justify-evenly py-28">
         <div>
           <img src="./src/assets/minti-footer.svg" alt="minti-footer" />
@@ -27,35 +27,73 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-      <div className="flex justify-center pb-5">
-        <table>
-          <thead>
-            <tr className="font-normal text-3xl align-right">
-              <th className="text-white pr-36">Mintii Account</th>
-              <th className="text-collections pr-36">Collections</th>
-              <th className="text-aboutUs pr-36">About Us</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="text-tds font-normal text-3xl">
-              <td className="py-2">Profile</td>
-              <td className="py-2">Mint NFT</td>
-              <td className="py-2">Mintii</td>
-            </tr>
-            <tr className="text-tds font-normal text-3xl">
-              <td className="py-2">Setting</td>
-              <td className="py-2">Buy NFT</td>
-              <td className="py-2">Artists</td>
-            </tr>
-            <tr className="text-tds font-normal text-3xl">
-              <td className="py-2">Privacy policy</td>
-              <td className="py-2">Sell NFT</td>
-            </tr>
-            <tr className="text-tds font-normal text-3xl">
-              <td className="py-2">Terms and condition</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="flex flex-col justify-center gap-4 pb-20 md:flex-row">
+        <div>
+          <ul className="">
+            <li className="font-normal text-3xl align-right text-white pr-36 pb-5">
+              Mintii Account
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Profile
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Setting
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Privact policy
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Terms and condition
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="font-normal text-3xl align-right text-collections pr-36 pb-5">
+              Collections
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Mint NFT
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Buy NFT
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Sell NFT
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li className="font-normal text-3xl align-right text-aboutUs pr-36 pb-5">
+              About Us
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Mintii
+              </a>
+            </li>
+            <li className="text-tds font-normal text-3xl pb-6">
+              <a href="" className="py-2">
+                Artists
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
