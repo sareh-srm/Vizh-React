@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     <header className="flex justify-between w-full h-24 sm:h-28">
       <div className="flex items-center gap-2 h-full pl-5 md:gap-10">
         <img
-          src="./src/assets/Logo.svg"
+          src="../public/assets/Logo.svg"
           className="h-16 w-16"
           alt="Mintii-Logo"
         />
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
             className="bg-gray rounded-3xl py-3.5 px-12 h-10 w-36 sm:w-72 lg:w-96"
           />
           <img
-            src="./src/assets/search-icon.svg"
+            src="../public/assets/search-icon.svg"
             alt="search icon"
             className="absolute left-4 top-1/2 transform -translate-y-1/2"
           />
