@@ -1,11 +1,11 @@
 import React from "react";
 import NFTCard from "./NFTCard";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const info = [
   {
     nftName: "NFT Name",
-    imageURL: "../public/assets/nftPic1.svg",
+    imageURL: "./assets/nftPic1.svg",
     logoURL: "./assets/profile-icon.svg",
     artistName: "Artist Name",
     currentBid: "Current Bid",
@@ -88,16 +88,18 @@ const info = [
 const NFTList: React.FC = () => {
   return (
     <main className="flex flex-wrap justify-start my-auto gap-10 px-4">
-      {info.map((information) => (
-        <NFTCard
-          nftName={information.nftName}
-          imageURL={information.imageURL}
-          logoURL={information.logoURL}
-          artistName={information.artistName}
-          currentBid={information.currentBid}
-          price={information.price}
-          key={information.nftName}
-        />
+      {info.map((information, index) => (
+        <Link key={index} to={`/details/${index}`}>
+          <NFTCard
+            nftName={information.nftName}
+            imageURL={information.imageURL}
+            logoURL={information.logoURL}
+            artistName={information.artistName}
+            currentBid={information.currentBid}
+            price={information.price}
+            key={information.nftName}
+          />
+        </Link>
       ))}
     </main>
   );

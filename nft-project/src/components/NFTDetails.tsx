@@ -1,11 +1,108 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
+interface NFTInfo {
+  nftName: string;
+  imageURL: string;
+  logoURL: string;
+  artistName: string;
+  currentBid: string;
+  price: string;
+}
+const info: NFTInfo[] = [
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic1.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic2.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic3.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic4.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic5.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic6.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic7.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic8.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic9.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+  {
+    nftName: "NFT Name",
+    imageURL: "../public/assets/nftPic10.svg",
+    logoURL: "./assets/profile-icon.svg",
+    artistName: "Artist Name",
+    currentBid: "Current Bid",
+    price: "0.4 ETH",
+  },
+];
 const NFTDetails: React.FC = () => {
+  const { id } = useParams<{ id?: string }>();
+  const nft = id ? info[parseInt(id, 10)] : undefined;
+  if (!nft) {
+    return <div>Loading...</div>;
+  }
   return (
     <div>
       <main className="flex justify-between p-6 h-full">
         <div className="w-3/6 h-full bg-gray rounded-2xl m-4 pt-10 pl-12 text-black">
           <h2 className="text-3xl font-normal mb-10">From "Collection Name"</h2>
+          <img src="../public/assets/CheckSign.svg" />
           <h1 className="text-5xl font-normal mb-6">Artwork Name</h1>
           <div className="flex w-48 justify-between mb-6">
             <h4 className="text-2xl font-normal">Royalties</h4>
@@ -48,8 +145,8 @@ const NFTDetails: React.FC = () => {
           </div>
         </div>
         <img
-          src="./src/assets/nftPic4.svg"
-          alt=""
+          src={nft.imageURL}
+          alt="alt nft"
           className="w-3/6 h-full object-contain rounded-2xl m-4"
         />
       </main>

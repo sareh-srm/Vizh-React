@@ -11,7 +11,7 @@ const App: React.FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<NFTList />} />
-        <Route path="/details" element={<NFTDetails />} />
+        <Route path="/details/:id" element={<NFTDetails />} />
       </Routes>
       <Footer />
     </Router>
