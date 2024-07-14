@@ -1,5 +1,7 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import Loading from "./Loading";
+import SuccessMessage from "./SuccessMessage";
 
 interface NFTInfo {
   nftName: string;
@@ -93,7 +95,26 @@ const info: NFTInfo[] = [
 ];
 const NFTDetails: React.FC = () => {
   const { id } = useParams<{ id?: string }>();
+  const navigate = useNavigate();
   const nft = id ? info[parseInt(id, 10)] : undefined;
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsSuccess(true);
+      setTimeout(() => {
+        setIsSuccess(false);
+        navigate("/");
+      }, 2000);
+    }, 2000);
+  };
+  // const eventHandler = () => {
+  //   alert("hello");
+  // };
   if (!nft) {
     return <div>Loading...</div>;
   }
@@ -101,8 +122,12 @@ const NFTDetails: React.FC = () => {
     <div>
       <main className="flex justify-between p-6 h-full">
         <div className="w-3/6 h-full bg-gray rounded-2xl m-4 pt-10 pl-12 text-black">
-          <h2 className="text-3xl font-normal mb-10">From "Collection Name"</h2>
-          <img src="../public/assets/CheckSign.svg" />
+          <div className="flex">
+            <h2 className="text-3xl font-normal mb-10">
+              From "Collection Name"
+            </h2>
+            <img src="../public/assets/CheckSign.svg" />
+          </div>
           <h1 className="text-5xl font-normal mb-6">Artwork Name</h1>
           <div className="flex w-48 justify-between mb-6">
             <h4 className="text-2xl font-normal">Royalties</h4>
@@ -139,14 +164,20 @@ const NFTDetails: React.FC = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-black text-aboutUs text-3xl font-normal rounded-full w-96 h-16 my-10">
+            <button
+              className="bg-black text-aboutUs text-3xl font-normal rounded-full w-96 h-16 my-10"
+              onClick={handleSubmit}
+              disabled={isLoading}
+            >
               Submit Purchase
             </button>
           </div>
+          {isLoading && <Loading />}
+          {isSuccess && <SuccessMessage />}
         </div>
         <img
           src={nft.imageURL}
-          alt="alt nft"
+          alt={nft.nftName}
           className="w-3/6 h-full object-contain rounded-2xl m-4"
         />
       </main>

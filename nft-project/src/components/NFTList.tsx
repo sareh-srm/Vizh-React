@@ -89,7 +89,7 @@ const NFTList: React.FC = () => {
   return (
     <main className="flex flex-wrap justify-start my-auto gap-10 px-4">
       {info.map((information, index) => (
-        <Link key={index} to={`/details/${index}`}>
+        <Link key={index} to={`/SubmitBid/${index}`}>
           <NFTCard
             nftName={information.nftName}
             imageURL={information.imageURL}

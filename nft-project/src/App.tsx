@@ -10,8 +10,12 @@ const App: React.FC = () => {
     <Router>
       <Header />
       <Routes>
+        {/* this should be the landing page */}
         <Route path="/" element={<NFTList />} />
-        <Route path="/details/:id" element={<NFTDetails />} />
+        {/* create a login page */}
+        {/* create nft list page */}
+
+        <Route path="/SubmitBid/:id" element={<NFTDetails />} />
       </Routes>
       <Footer />
     </Router>
