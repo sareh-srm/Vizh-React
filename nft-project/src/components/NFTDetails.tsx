@@ -4,6 +4,7 @@ import Loading from "./Loading";
 import SuccessMessage from "./SuccessMessage";
 
 interface NFTInfo {
+  id: string;
   nftName: string;
   imageURL: string;
   logoURL: string;
@@ -13,6 +14,7 @@ interface NFTInfo {
 }
 const info: NFTInfo[] = [
   {
+    id: "1",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic1.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -21,6 +23,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "2",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic2.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -29,6 +32,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "3",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic3.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -37,6 +41,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "4",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic4.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -45,6 +50,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "5",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic5.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -53,6 +59,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "6",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic6.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -61,6 +68,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "7",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic7.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -69,6 +77,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "8",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic8.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -77,6 +86,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "9",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic9.svg",
     logoURL: "./assets/profile-icon.svg",
@@ -85,6 +95,7 @@ const info: NFTInfo[] = [
     price: "0.4 ETH",
   },
   {
+    id: "10",
     nftName: "NFT Name",
     imageURL: "../public/assets/nftPic10.svg",
     logoURL: "./assets/profile-icon.svg",

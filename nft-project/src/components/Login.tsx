@@ -1,9 +1,45 @@
-import React from "react";
+import { useState } from "react";
+import PocketBase from "pocketbase";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
+
+  const queryParams = new URLSearchParams(location.search);
+  const nftId = queryParams.get("nft");
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const pb = new PocketBase("http://127.0.0.1:8090");
+    try {
+      const authData = await pb
+        .collection("users")
+        .authWithPassword(email, password);
+      console.log(authData);
+
+      if (nftId) {
+        navigate(`/nftdetails/${nftId}`);
+      } else {
+        navigate("/");
+      }
+    } catch (err) {
+      console.log("Login failed", err);
+      setError("Login failed, please check your credentials and try again");
+    }
+  };
+
   return (
     <>
-      <form className="flex flex-col justify-center items-center space-y-4 p-6 max-w-md mx-auto bg-gray shadow-md rounded-lg">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center items-center space-y-4 p-6 max-w-md mx-auto bg-gray shadow-md rounded-lg"
+      >
+        {error && <p>{error}</p>}
         <div className="w-full">
           <label
             htmlFor="email"
@@ -14,6 +50,8 @@ const Login: React.FC = () => {
           <input
             type="email"
             id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="shadow appearance-none border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
@@ -27,6 +65,8 @@ const Login: React.FC = () => {
           <input
             type="password"
             id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className="shadow appearance-none border-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           />
         </div>
