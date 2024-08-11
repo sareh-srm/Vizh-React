@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "backend": "cd pocketbase_0.22.17 && pocketbase serve --http localhost:9292"
+  },
   "devDependencies": {
     "@types/react": "^18.2.35",
     "@types/react-dom": "^18.2.14",

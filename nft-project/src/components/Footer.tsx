@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer className="bg-footer mt-10 w-full h-2/6">
       <div className="flex justify-evenly py-28">
         <div>
-          <img src="./src/assets/minti-footer.svg" alt="minti-footer" />
+          <img src="../public/assets/minti-footer.svg" alt="minti-footer" />
         </div>
 
         <div>

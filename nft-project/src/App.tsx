@@ -1,20 +1,45 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
 import NFTList from "./components/NFTList";
-import Footer from "./components/Footer";
 import NFTDetails from "./components/NFTDetails";
+import Login from "./components/Login";
+import Home from "./routes/Home";
+
+/** 
+  * This is the initial beta version of the app. it's like an MVP.
+  * There's no landing page here to have marketing strategy.
+ **/
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    
+    element: <Login />,
+  },
+  {
+    path: "/",
+    element: <Home />,
+    children:[
+      {
+        path: "/",
+        element: <NFTList />,
+      },
+      {
+        path: "details/:id",
+        element: <NFTDetails />,
+      }
+    ]
+  }
+]);
+
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<NFTList />} />
-        <Route path="/details" element={<NFTDetails />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <RouterProvider router={router} />
   );
 };
 
