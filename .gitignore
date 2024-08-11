@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 
 
+pocketbase_0.22.17/pb_data/logs.db
